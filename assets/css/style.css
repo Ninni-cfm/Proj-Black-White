@@ -99,13 +99,14 @@ nav li a:hover {
     line-height: 90%;
     z-index: 1;
 }
-.top-page-span {
+#top-page span {
     color: white;
+    background-color: transparent;
     -webkit-text-stroke: 4px black;
 }
 .top-page-span-dark {
-    color: white;
-    -webkit-text-stroke: 4px black;
+    color: black;
+    -webkit-text-stroke: 4px white;
 }
 
 #top-page div {
