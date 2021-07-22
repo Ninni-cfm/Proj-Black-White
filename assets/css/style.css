@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "maison-neue-mono";
+    src: url("../fonts/maison-neue-mono.woff2");
+}
+@font-face {
+    font-family: "rz-regular";
+    src: url("../fonts/rz-regular.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 1vmin; */
+}
+
+body {
+    font-family: "rz-regular";
+    color: black;
+    background-color: white;
+
+    /* for testing the proportions of fontsize with images */
+    width: 1440px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background: rgba(161, 212, 161, 0.603);
+}
+
+/*****************************************************************************
+    Header and navigation setup, positioning and sizes
+*/
+header {
+    /* border-bottom: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+nav {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1% 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+}
+/*----------------------------------------------------------------------------
+    Navigation: link with logo
+*/
+.logo {
+    /* margin-left: 10%; */
+    text-decoration: none;
+    justify-self: flex-start;
+    flex-grow: 2;
+}
+/*----------------------------------------------------------------------------
+    Navigation: unordered list with links
+*/
+nav ul {
+    justify-self: flex-start;
+    flex-grow: 1;
+    /* width: 50%; */
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav li a {
+    padding: 0%;
+    color: black;
+}
+nav li a:visited {
+    color: black;
+}
+nav li a:hover {
+    color: black;
+}
+
+/*****************************************************************************
+    section: top-page
+*/
+#top-page {
+    padding-bottom: 15%;
+}
+
+#top-page h1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 7.4em;
+    font-weight: 400;
+    line-height: 90%;
+    z-index: 1;
+}
+.top-page-span {
+    color: white;
+    -webkit-text-stroke: 4px black;
+}
+
+#top-page div {
+    position: relative;
+    padding-top: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-page img {
+    align-self: flex-start;
+}
+
+#img-1 {
+    width: 20%;
+    margin-top: 6%;
+}
+#img-2 {
+    width: 25%;
+    margin-top: 13%;
+}
+#img-3 {
+    width: 25%;
+    margin-top: 2%;
+}
+
+/*****************************************************************************
+    section: The agency: skills, mission and vision 
+*/
+#agency {
+    padding: 5% 5% 25% 25%;
+}
+#agency ul {
+    list-style: none;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#agency table,
+#agency tr {
+    text-align: left;
+    vertical-align: top;
+}
+#agency th {
+    font-family: "maison-neue-mono";
+    padding-bottom: 2%;
+}
+#agency th:last-of-type,
+#agency td:last-of-type {
+    padding-left: 10%;
+}
+
+/*****************************************************************************
+    section: Projects 
+*/
+#projects {
+    min-height: 90vh;
+}
+
+#projects h6 {
+    font-family: "maison-neue-mono";
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+/*****************************************************************************
+    section: Contact
+*/
+#say-hi {
+    /* min-height: 90vh; */
+    padding: 10% 10% 10%;
+    font-family: "rz-regular";
+    font-size: 3.5em;
+    font-weight: 100;
+    background-color: black;
+}
+#say-hi h1 {
+    color: white;
+    padding-bottom: 10%;
+}
+
+#say-hi a {
+    font-size: 0.3em;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 1% 6%;
+    transition: 0.25s;
+}
+#say-hi a:hover {
+    text-decoration: none;
+    box-shadow: 3px 3px white;
+    transition: 0.4s;
+}
+
+/*****************************************************************************
+    Footer
+*/
+footer {
+    text-align: center;
+    padding: 2%;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/*****************************************************************************
+                            That's all, folks!
+*****************************************************************************/
