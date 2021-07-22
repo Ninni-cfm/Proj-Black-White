@@ -12,18 +12,26 @@
 </head>
 
 <body class="dark-mode">
+
+    <!-- ********************************************************************************
+        Header: logo and navigation 
+    -->
     <header>
         <nav class="dark-mode">
             <a class="dark-mode logo" href="#" onclick="switchMode()">Art of Black & White</a>
             <ul>
-                <li><a class="dark-mode" id="projects" href="#projects">Projects</a></li>
-                <li><a class="dark-mode" id="agency" href="#agency">The Agency</a></li>
-                <li><a class="dark-mode" id="contact" href="#contact">Contact</a></li>
+                <li><a class="dark-mode" href="#projects">Projects</a></li>
+                <li><a class="dark-mode" href="#agency">The Agency</a></li>
+                <li><a class="dark-mode" href="#contact">Contact</a></li>
             </ul>
         </nav>
-
     </header>
+
     <main>
+
+        <!-- ****************************************************************************
+            section: top-page
+        -->
         <section id="top-page">
             <h1>Art of Black & White is<br>
                 an independent<br>
@@ -33,13 +41,15 @@
             </h1>
             <div>
                 <img id="img-1" src="assets/img/image_12.png" alt="">
-                <img id="img-2" src="assets/img/landspace-mid.png" alt="">
+                <img id="img-2" src="assets/img/image_4.png" alt="">
                 <img id="img-3" src="assets/img/image_5.jpg" alt="">
             </div>
-
         </section>
 
-        <div id="agency">
+        <!-- ****************************************************************************
+            section: The agency: skills, mission and vision
+        -->
+        <section id="agency">
             <table>
                 <thead>
                     <tr>
@@ -82,50 +92,73 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </section>
 
+        <!-- ****************************************************************************
+            section: Projects
+        -->
         <section id="projects">
             <h6>Our latest projects</h6>
             <div>
-                2020
-                <a class="dark-mode" id="project1" href="#"> Landscape</a>
-                <img src="" alt="">
+                <div>
+                    <h5>2020</h5>
+                    <p> <a class="dark-mode" href="#">Landscape</a></p>
+                </div>
+                <img src="assets/img/project-1.png" alt="">
+            </div>
+
+            <div>
+                <img src="assets/img/project-2.png" alt="">
+                <div>
+                    <h5>2020</h5>
+                    <p><a class="dark-mode" href="#">Landscape</a></p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h5>2020</h5>
+                    <p><a class="dark-mode" href="#">People</a></p>
+                </div>
+                <img src="assets/img/project-3.png" alt="">
             </div>
             <div>
-                <img src="" alt="">
-                2020
-                <a class="dark-mode" id="project2" href="#">Landscape</a>
+                <img src="assets/img/project-4.png" alt="">
+                <div>
+                    <h5>2020</h5>
+                    <p><a class="dark-mode" href="#">Landscape</a></p>
+                </div>
             </div>
             <div>
-                2020
-                <a class="dark-mode" id="project3" href="#">People</a>
-                <img src="" alt="">
-            </div>
-            <div>
-                <img src="" alt="">
-                2020
-                <a class="dark-mode" id="project4" href="#">Landscape</a>
-            </div>
-            <div>
-                2020
-                <a class="dark-mode" id="project5" href="#">Landscape</a>
-                <img src="" alt="">
+                <div>
+                    <h5>2020</h5>
+                    <p><a class="dark-mode" href="#">Landscape</a></p>
+                </div>
+                <img src="assets/img/project-5.png" alt="">
             </div>
 
         </section>
 
-
-        <div class="dark-mode" id="say-hi">
+        <!-- ****************************************************************************
+            section: Contact
+        -->
+        <section class="dark-mode" id="contact">
             <h1 class="dark-mode">Don´t be shy,<br>say hi.</h1>
             <p class="dark-mode">
                 <a id="mailto" href="mailto:supert@super.de">Send</a>
             </p>
-        </div>
+        </section>
 
     </main>
+
+    <!-- ********************************************************************************
+        Footer
+    -->
     <footer id="footer">
         © 2020 - Art of Black & White
     </footer>
+
+
     <script src="assets/js/main.js"></script>
 </body>
 

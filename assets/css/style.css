@@ -14,7 +14,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* font-size: 1vmin; */
 }
 
 body {
@@ -22,9 +21,11 @@ body {
     color: black;
     background-color: white;
 
-    /* for testing the proportions of fontsize with images */
-    width: 1440px;
+    /* testing proportions of fontsize with images in section 1*/
+    max-width: 1440px;
+    border-right: 1px solid black;
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -44,42 +45,37 @@ a:hover {
 /*****************************************************************************
     Header and navigation setup, positioning and sizes
 */
-header {
-    /* border-bottom: 1px solid black;
-    border-bottom: 1px solid black; */
-}
 nav {
     background-color: white;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 1% 5%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 /*----------------------------------------------------------------------------
     Navigation: link with logo
 */
 .logo {
-    /* margin-left: 10%; */
     text-decoration: none;
     justify-self: flex-start;
-    flex-grow: 2;
+    flex-grow: 1;
 }
 /*----------------------------------------------------------------------------
     Navigation: unordered list with links
 */
 nav ul {
     justify-self: flex-start;
-    flex-grow: 1;
-    /* width: 50%; */
+    flex-grow: 0.5;
     list-style: none;
 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 nav li a {
     padding: 0%;
     color: black;
@@ -94,15 +90,11 @@ nav li a:hover {
 /*****************************************************************************
     section: top-page
 */
-#top-page {
-    padding-bottom: 15%;
-}
-
 #top-page h1 {
     position: absolute;
     top: 20%;
-    left: 5%;
-    font-size: 7.4em;
+    left: 8%;
+    font-size: 7em;
     font-weight: 400;
     line-height: 90%;
     z-index: 1;
@@ -111,10 +103,15 @@ nav li a:hover {
     color: white;
     -webkit-text-stroke: 4px black;
 }
+.top-page-span-dark {
+    color: white;
+    -webkit-text-stroke: 4px black;
+}
 
 #top-page div {
     position: relative;
-    padding-top: 16%;
+    top: 20%;
+    padding-top: 20%;
     display: flex;
     justify-content: space-between;
 }
@@ -124,23 +121,23 @@ nav li a:hover {
 }
 
 #img-1 {
-    width: 20%;
-    margin-top: 6%;
+    width: 25%;
+    margin-top: 4%;
 }
 #img-2 {
     width: 25%;
-    margin-top: 13%;
+    margin-top: 11%;
+    margin-left: 4%;
 }
 #img-3 {
     width: 25%;
-    margin-top: 2%;
 }
 
 /*****************************************************************************
     section: The agency: skills, mission and vision 
 */
 #agency {
-    padding: 5% 5% 25% 25%;
+    padding: 25% 5% 25% 25%;
 }
 #agency ul {
     list-style: none;
@@ -168,39 +165,68 @@ nav li a:hover {
 #projects {
     min-height: 90vh;
 }
-
-#projects h6 {
+#projects h5 {
     font-family: "maison-neue-mono";
     font-size: 1em;
-    text-align: center;
     padding-bottom: 2%;
+}
+
+#projects h6 {
+    text-align: center;
+}
+
+#projects a {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#projects div {
+    display: flex;
+    padding: 10% 0%;
+}
+
+#projects div > div {
+    align-self: center;
+    display: inline-block;
+    width: 50%;
+    padding: 5%;
+}
+
+#projects img {
+    width: 50%;
+}
+
+#projects > div:nth-of-type(odd) > div {
+    text-align: right;
 }
 
 /*****************************************************************************
     section: Contact
 */
-#say-hi {
+#contact {
     /* min-height: 90vh; */
-    padding: 10% 10% 10%;
+    padding: 19% 0%;
     font-family: "rz-regular";
     font-size: 3.5em;
     font-weight: 100;
     background-color: black;
 }
-#say-hi h1 {
+#contact h1 {
     color: white;
+    padding-left: 10%;
     padding-bottom: 10%;
 }
 
-#say-hi a {
+#contact a {
     font-size: 0.3em;
     color: white;
     background-color: black;
     border: 1px solid white;
     padding: 1% 6%;
+    margin-left: 10%;
     transition: 0.25s;
 }
-#say-hi a:hover {
+#contact a:hover {
     text-decoration: none;
     box-shadow: 3px 3px white;
     transition: 0.4s;
