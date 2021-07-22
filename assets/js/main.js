@@ -13,7 +13,6 @@ function switchMode() {
         document.getElementById("img-1").src = 'assets/darkmode-img/image_12.jpg';
         document.getElementById("img-2").src = 'assets/darkmode-img/image_4.jpg';
         document.getElementById("img-3").src = 'assets/darkmode-img/image_5.jpg';
-
         document.getElementById("project-1").src = 'assets/darkmode-img/project-1.jpg';
         document.getElementById("project-2").src = 'assets/darkmode-img/project-2.jpg';
         document.getElementById("project-3").src = 'assets/darkmode-img/project-3.jpg';
@@ -23,7 +22,6 @@ function switchMode() {
         document.getElementById("img-1").src = 'assets/img/image_12.png';
         document.getElementById("img-2").src = 'assets/img/image_4.png';
         document.getElementById("img-3").src = 'assets/img/image_5.jpg';
-
         document.getElementById("project-1").src = 'assets/img/project-1.png';
         document.getElementById("project-2").src = 'assets/img/project-2.png';
         document.getElementById("project-3").src = 'assets/img/project-3.png';
