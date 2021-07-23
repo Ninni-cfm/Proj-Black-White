@@ -5,10 +5,13 @@ function switchMode() {
 
     invertForeAndBackgroundColors("dark-mode");
 
-    let isDarkMode = document.body.style.backgroundColor == "rgb(0, 0, 0)" ? true : false;
-    console.log("isDarkMode:", isDarkMode);
+    // some elements with '-webkit-text-stroke': 4px black;'
+    // disabled until we know how to access the colors of this prpoperty
+    // invertForeAndBackgroundColors("dark-mode-span");
 
-    // todo: replace pictures with inverted pictures
+    let isDarkMode = document.body.style.backgroundColor == "rgb(0, 0, 0)" ? true : false;
+    debugLog("isDarkMode:", isDarkMode);
+
     if (isDarkMode) {
         document.getElementById("img-1").src = 'assets/darkmode-img/image_12.jpg';
         document.getElementById("img-2").src = 'assets/darkmode-img/image_4.jpg';
@@ -31,8 +34,6 @@ function switchMode() {
 }
 
 
-
-
 function invertForeAndBackgroundColors(className) {
 
     // get all elements with the given class name
@@ -49,6 +50,7 @@ function invertForeAndBackgroundColors(className) {
         x[i].style.color = invertColor(styles.color);
         x[i].style.backgroundColor = invertColor(styles.backgroundColor);
 
+        // todo: extend function invertColor() to work with multiple colors!
         // borderColor is special, it contains 4 rgb values
         // x[i].style.borderColor = invertColor(styles.borderColor);
     }
@@ -57,8 +59,6 @@ function invertForeAndBackgroundColors(className) {
 
 function invertColor(rgb) {
 
-    debugLog("rgb = " + rgb);
-
     // are the color channels sparated by comma or space?
     var sep = rgb.indexOf(",") > -1 ? "," : " ";
 
@@ -66,8 +66,8 @@ function invertColor(rgb) {
     rgb = rgb.substr(rgb.indexOf("(") + 1).split(")")[0].split(sep);
 
     // build the new color property: 
-    //  rgba( r, g, b, a)  if an alpha channel exists
-    //  rgba( r, g, b)  if no alpha channel exists
+    //  if an alpha channel exists: rgba( r, g, b, a)
+    //  if no alpha channel exists: rgb( r, g, b)
     let rgbInverted = rgb.length == 4 ? "rgba(" : "rgb(";
 
     // append the  inverted color channels
@@ -81,13 +81,12 @@ function invertColor(rgb) {
     // final parenthesis
     rgbInverted += ")";
 
-    // debugLog("rgbInverted = " + rgbInverted);
-
     // return the inverted color property
     return rgbInverted;
 }
 
+// if you don't need any more debug output in the console window, 
+// just comment the console.log command ;-)
 function debugLog(...params) {
-
-    // console.log(params);
+    console.log(params);
 }
